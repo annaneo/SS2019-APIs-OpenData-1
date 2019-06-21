@@ -1,12 +1,12 @@
 ### 22.6.2019 | Akademie der Wissenschaften und der Literatur | Mainz
 
-# Title
+# APIs und offene Daten
 
-## Subtitle
+## Design, Modellierung, Best Practices
 
 ### Anna Neovesky
 
-Präsentation zur 1. Sitzung des Seminars "APIs und offene Daten - Deisgn, Modellierung, Best Practices" im Rahmen des Studiengangs "Digitale Methodik in den Geistes- und Kulturwissenschaften" der JGU Mainz und der HS Mainz
+Präsentation zur 1. Sitzung des Seminars "APIs und offene Daten - Design, Modellierung, Best Practices" im Rahmen des Studiengangs "Digitale Methodik in den Geistes- und Kulturwissenschaften" der JGU Mainz und der HS Mainz
 
 Code zu diesem Repositorium:
 https://github.com/annaneo/SS2019-9o-APIs-OpenData-1.Sitzung/edit/master/README.md
