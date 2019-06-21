@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>APIs und offene Daten</title>
+
+    <!-- meta information -->
+    <meta name="author" content="Anna Neovesky" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="resources/img/favicon.png" />
+    <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+
+    <!-- CSS reset and grid -->
+    <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
+    <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+
+    <!-- styles for included libraries -->
+
+    <!-- chartist -->
+    <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" />
+
+    <!-- codemirror -->
+    <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+    <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
+
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+
+    <!-- standard presentation styles -->
+    <link href="resources/css/style.css" rel="stylesheet" />
+
+    <!-- custom presentation styles -->
+    <link href="resources/css/custom.css" rel="stylesheet" />
+
+    <!-- js needed in head -->
+
+    <!-- greuler -->
+    <script src="vendor/d3/d3-3.5.6.js"></script>
+    <script src="vendor/cola/cola.v3.min.js"></script>
+    <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+
+    <!-- html5 dataset shim for IE -->
+    <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div class="fallback-message">
+        <p>
+            Your browser <strong>doesn't support the features required</strong> by impress.mod.js,
+            so you are presented with a simplified version of this presentation.
+        </p>
+        <p>
+            For the best experience please use the latest <strong>Chrome</strong>, <strong>Safari</strong>
+            or <strong>Firefox</strong> browser.
+        </p>
+    </div>
+
+    <div id="impress">
+
+        <div class="step">
+            <h4><strong>22. Juni 2019</strong> | Lehrveranstaltung 9o "Aktuelle Forschung" SS 2019</h4>
+        
+
+
+            <h1 class="down-100">APIs und offene Daten</h1>
+
+            <h2 class="red up-25">Design, Modellierung,<br/> Best Practices</h2>
+
+            <h4 class="down-100">
+                <strong>Slides:</strong>
+                <a href="#" title="View the presentation online">
+                    Link
+                </a>
+            </h4>
+
+            <h5>
+                <strong><a href="http://www.adwmainz.de/mitarbeiterinnen/profil/anna-neovesky.html">Anna Neovesky</a></strong> |
+                <img src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter" class="twitter-icon" />
+                <a href="https://twitter.com/annavsk" title="Personal Twitter">@annavsk</a> |
+                <img src="resources/img/Octicons-mark-github.svg" alt="Twitter" class="gh-icon" />
+                <a href="https://github.com/annaneo" title="Personal GitHub">annaneo</a> |
+                <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>
+
+            </h5>
+        </div>
+
+        <div class="step">
+            <h2>Inhalte der Sitzung am 22.6.2019</h2>
+            <ol class="line-height-one-five">
+               <li>Thema der Veranstaltung</li>
+                <li>
+                    Vorstellungsrunde
+                </li>
+                <li>
+                    Organisatorusche Hinweise
+                </li>
+                <li>
+                    Gesamtüberblick über die Inhalte der Lehrveranstaltung
+                </li>
+                <li>
+                    Überblick: APIs
+                </li>
+                <li>
+                    Offene Daten
+                </li>
+                <li>
+                    Optional: Standards und Formate für offene Daten
+                </li>
+                <li>
+                    Vergabe von Referatsthemen
+                </li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h1 class="red">01</h1>
+            <h2 class="line-height-one-five">
+                Thema der Veranstaltung
+            </h2>
+        </div>
+
+
+        <div class="step">
+            <h2>Wieso sind APIs und offene Daten ein Thema der aktuellen Forschung?</h2>
+            <ul class="line-height-one-five">
+                <li>Steigende Anzahl von offenen Daten in den Geisteswissenschaften: Erfahrungen, Reflexion
+                </li>
+                <li>Politische und infrastrukturelle Ebene
+                </li>
+            </ul>
+            Außerdem:
+            <ul>
+                <li>stark interdisziplinäre</li>
+                <li>Bezüge aus Wissenschaft und freie Wirtschaft (Stichworte: Open Government data, Smart City)</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Aktuell besonders diskutierte Themen in den DH</h2>
+            <ul class="line-height-one-five">
+                <li>Interoperabilität über Disziplinen hinweg</li>
+                <li>Aktuelle infrastrukturelle und forschungspolitische Bestrebungen</li>
+                <li>Qualitätskriterien für Daten</li>
+                <li>Stärkerer Fokus auf Nachnutzung</li>
+                <li>Kontext Nachhaltigkeit</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Wieso gehören die Themen APIs und offene Daten eng zusammen?</h2>
+            <ul class="line-height-one-five">
+                <li>Offenheit von Daten Ist die Voraussetzung für ihre Bereitstellung</li>
+                <li>APIs sind die Bereitstellungsart für offene Daten</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Welche zentralen Inhalte werden in diesem Seminar vermittelt?</h2>
+            <ul class="line-height-one-five">
+                <li>Aktuelle Debatten im Kontext Open Data und der Bereitstellung von Forschungsdaten</li>
+                <li>Typen von APIs und Auszeichnungsformate für offene Daten</li>
+                <li>Besonderheiten von APIs im Bezug auf Geisteswissenschaften</li>
+                <li>Aspekte von der Planung bis zur Bereitstellung von Daten: Datenformate, Lizenzmodelle, Bereitstellung</li>
+                </li>
+                <li>Tools, Software, Libraries für die praktische Bereitstellung</li>
+                <li>Good practices für API Design</li>
+                <li>Qualitätskriterien: Kritischer Umgang mit Daten und Schnittstellen</li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Verschiedene Perspektiven auf APIs</h2>
+            <ul class="line-height-one-five">
+                <li>Projektmanagement:  Lizenzierung, Nachhaltigkeit</li>
+                <li>Datenaufbereitung: Modellierung, Annotation</li>
+                <li>Entwicklungsperspektive: Good practices, Libraries, Tools</li>
+                <li>Nutzer*innenseite: Vorwissen, Use cases</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Mentimeter</h2>
+            <ul class="line-height-one-five">
+                <p><a href="www.menti.com">www.menti.com</a><br/>
+                    Code: 86 20 03
+                </p>
+            </ul>
+        </div>
+
+
+        <div class="step">
+            <h2>
+                Vorstellungsrunde
+            </h2>
+            <ul>
+                <li>Wie heißen Sie?</li>
+                <li>Was haben sie bisher studiert?</li>
+                <li>Welche Erfahrungen haben Sie mit APIs und offenen Daten schon gemacht?</li>
+                <li>Welche Aspekte interessieren Sie besonders an dem Seminar?</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h1 class="red">03</h1>
+            <h2 class="line-height-one-five">
+                Organisatorische Hinweise
+            </h2>
+        </div>
+
+        <div class="step">
+            <h2>Zeitplan, Themen, Leistungsnachweis</h2>
+            <ul class="line-height-one-five">
+                <p>Zeitplan und weitere organisatorische Hinweise stehen im Seminarhandbuch:
+                    <a href="https://digitale-methodik.adwmainz.net/mod9/9o/pages/schedule">
+                        https://digitale-methodik.adwmainz.net/mod9/9o/pages/schedule
+                    </a>
+                </p>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Anwesenheit</h2>
+            <ul class="line-height-one-five">
+                <li>Teilnahme an allen Sitzung</li>
+                <li>In Ausnahmefällen: remote-Teilnahme möglich</li>
+            </ul>
+        </div>
+
+
+        <div class="step">
+            <h2>
+                Thema der heutigen Sitzung
+            </h2>
+            <ul>
+                <li>Open Data</li>
+                <li>In Gruppenarbeit werden zentrale Aspekte und Fragen im Zusammenhang mit Open Data erarbeitet</li>
+                <li>Überblick: Was sind APIs?</li>
+                <li>Welche Typen / Bereitstellungsarten für offene APIs gibt es?</li>
+                <li>Welche Rolle spielen APIs in den DH?</li>
+                <li>Überblick zu APIs und Inhalten für Referate und Modellierung</li>
+            </ul>
+        </div>
+
+
+        <div class="step">
+            <h1 class="red">04</h1>
+            <h2 class="line-height-one-five">
+                Open Data
+            </h2>
+        </div>
+
+
+
+
+        <div class="step">
+            <h1 class="red">05</h1>
+            <h2 class="line-height-one-five">
+                Überblick APIs:
+            </h2>
+        </div>
+
+        <div class="step">
+            <h2>Literaturhinweise</h2>
+            <ul class="line-height-one-five">
+                <p>
+                    Irresistible APIs, S. 3-10<br/>
+                    Designing Web APIs. S. 1-26<br/>
+                    Außerdem zum Gesamtverständnis zu HTTP und REST hilfreich:<br/>
+                    Irresistible APIs, S. 64-77.<br/>
+                    <a href="https://digitale-methodik.adwmainz.net/mod7/7a/pages/http">Seminarhandbuch "Webbasierte Forschungsapplikationen</a>
+                </p>
+            </ul>
+        </div>
+
+
+
+        <div class="step">
+            <h2>Was ist eine API?</h2>
+            <ul class="line-height-one-five">
+                <li>nicht präzise definiert</li>
+                <li>unterschiedliche Definitionen</li>
+                <li>Begriff verschieden weit gefasst</li>
+            </ul>
+        </div>
+
+
+        <div class="step">
+            <h2>Definitionen</h2>
+            <blockquote>
+                "Programmteil, der von einem Softwaresystem
+                anderen Programmen zur Anbindung an das System zur Verfügung gestellt wird"
+            </blockquote>
+            <p><a href="https://de.m.wikipedia.org/wiki/Programmierschnittstelle">Wikipedia</a></p>
+            <blockquote>
+                "API stands for Application Programming Interface.
+                It refers to a set of tools, protocols or routines used for building applications.
+                An API informs software how it must interact."
+            </blockquote>
+            <p><a href="https://en.wikipedia.org/wiki/Application_programming_interface">Wikipedia EN</a></p>
+            <blockquote>
+                "promoting interoperability between a variety of components and systems"
+            </blockquote>
+            <p>Erstmalige Nennung des Begriff API und Definition 1968 in
+                <a href="https://dl.acm.org/citation.cfm?id=1476661">Data Structures and Techniques for Remote Computer Graphics"</a></p>
+        </div>
+
+        <div class="step">
+            <h2>Allgemein:</h2>
+            <ul class="line-height-one-five">
+                Allgemein: Eine API
+                <li>bietet ein Set an Operationen an (In- und Output)</li>
+                <li>ermöglicht Nachnutzung der Inhalte, auf die mit den Operationen zugegriffen wird</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Definition im Rahmen dieses Seminars</h2>
+            <blockquote>
+                Eine Programmierschnittstelle stellt Daten offen in einem maschinenlesbaren Format bereit
+                und soll von einer bestimmten Zielgruppe genutzt werden.
+            </blockquote>
+        </div>
+
+
+        <div class="step">
+            <h2>Grundsätzliche Möglichkeiten der Unterscheidung und Kategorisierung</h2>
+            <ul class="line-height-one-five">
+                <li>Hardware / Software Schnittstelle <br/>
+                    Device API und Web API
+                </li>
+                <li class="substep">Interne / Externe API</li>
+            </ul>
+            <dl class="substep">
+                <dt>Interne API</dt>
+                <dd>Aufteilung von Code in einzelne Komponenten<br/>
+                    steigert Modularität, verringert Komplexität<br/>
+                    Service-Oriented Architectures: Gesamtsystem in unabhängige Teil-Systeme zerlegt<br/>
+                    Zielgruppe: Man selbst oder Team-Mitglieder</dd>
+                <dt>Externe API</dt>
+                <dd>meistens gemeint, wenn über APIs gesprochen wird<br/>
+                    Bereitstellung von Funktionen und Daten<br/>
+                    Zielgruppe: externe Partner, "Das Internet"</dd>
+            </dl>
+        </div>
+
+        <div class="step">
+            <h2>Entwicklung des Begriffs API</h2>
+            <div>
+                <p>Ursprünglich</p>
+                <ul class="line-height-one-five">
+                    <li>Interface zwischen Computersystemen</li>
+                    <li>meist eng verbundene Systeme, bei denen die API nicht auch von externen genutzt werden sollte </li>
+                    <li>APIs als Architekturstil für modulare Softwarearchitektur</li>
+                </ul>
+            </div>
+            <div class="substep">
+                <p>Heute¹</p>
+                <ul class="line-height-one-five">
+                    <li>Verwendung des Begriffes API heute (und vor allem im DH Kontext)
+                        meistens im Sinne von Web APIs, also Schnittstellen von Websites und Webapplikationen</li>
+                    <li>Systeme sind stärker entkoppelt</li>
+                </ul>
+            </div>
+            <p class="small">¹ Seit wann gibt es die ersten Web APIs? Ende 90er: SOAP/XML endpoints. 2006: Twitter und Facook API.</p>
+
+        </div>
+
+
+        <div class="step">
+            <h2>Wozu werden Web APIs genutzt?</h2>
+            <ul class="line-height-one-five">
+                <li>ermöglicht Kommunikation zwischen zwei Systemen</li>
+                <li>dienen dem Austausch und der Weiterverarbeitung von Daten
+                    und Inhalten verschiedener Websites / Applikationen</li>
+            </ul>
+
+            <ul class="substep">
+                <li>Zugang zu Daten</li>
+                <li>Zugang zu Diensten</li>
+                <li>Grundstein der Softwareentwicklung / Softwarearchitekturmuster</li>
+            </ul>
+
+            <p class="substep">
+                Es gibt dabei verschiedene Arten von Web APIs,
+                die meisten kommunizieren über das HTTP Protokoll und sind damit  HTTP-Schnittstellen.
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>HTTP</h2>
+            <ul class="line-height-one-five">
+                <li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>HTTP</h2>
+            <ul class="line-height-one-five">
+                <li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>HTTP</h2>
+            <ul class="line-height-one-five">
+                <li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>REST</h2>
+            <ul class="line-height-one-five">
+                <li>REpresentational State Transfer Architektur</li>
+                <li>Architekturprinzip</li>
+                <li>6 constraints</li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h1 class="red">06</h1>
+            <h2 class="line-height-one-five">
+                Bereitstellungsarten
+            </h2>
+        </div>
+
+        <div class="step">
+            <h2>Typen, Bereitstellungsarten?</h2>
+            <ul class="line-height-one-five">
+                <li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Überblick über verschiedene Typen</h2>
+            <ul class="line-height-one-five">
+                <li>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="step">
+            <h1 class="red">06</h1>
+            <h2 class="line-height-one-five">
+                APIs in den Geisteswissenschaften
+            </h2>
+        </div>
+
+
+
+        <div class="step">
+            <h2>Besonderheiten von APIs in den Geisteswissenschaften</h2>
+            <ul>
+                <li>APIs primär, um Daten zu beziehen</li>
+                <li>meist nur zur Datenabfrage</li>
+                <li>deutlich höherer Standardisierungsgrad was Links und Vokabularien betrifft als in anderen Kontexten</li>
+                <li>XML vor JSON</li>
+                <li>RESTful zwar weit verbreitet, aber auch andere Formate dominieren</li>
+            </ul>
+        </div>
+
+
+
+        <div class="step">
+            <h2>Repositorien zu APIs</h2>
+            <ul class="line-height-one-five">
+                <li>programmable web</li>
+                <li>re3data</li>
+                <li>riSources</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Liste zu ausgewählten wichtigen APIs</h2>
+            <ul class="line-height-one-five">
+                <li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2></h2>
+            <ul class="line-height-one-five">
+                <li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2></h2>
+            <ul class="line-height-one-five">
+                <li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2></h2>
+            <ul class="line-height-one-five">
+                <li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2></h2>
+            <ul class="line-height-one-five">
+                <li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2></h2>
+            <ul class="line-height-one-five">
+                <li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2></h2>
+            <ul class="line-height-one-five">
+                <li>
+                </li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2></h2>
+            <ul class="line-height-one-five">
+                <li>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <div class="step">
+            <h2>Text</h2>
+            <h3 class="red up-25 after-25">Standard text styles</h3>
+            <p class="justify">
+               To die or fly to <span class="dotted">dream</span>: ay, <em>that makes calamity of office</em>, and to be: to dread of, and the heart-ache<sup>1</sup>
+               and sweat pith their <span class="outline">currents</span> turns, puzzles <code>the pale cast of outrageous</code> for who would bear, <strong>to be
+               or to sleep</strong> of <del>death</del> <ins>life</ins> what pith and sweat pith <span class="underline">the pangs and arrows</span> of dispriz'd lose ills
+               we have shuffled o'er with a <span class="highlight">bare</span> bourn no <a href="https://en.wikipedia.org/wiki/Mortal_coil">mortal coil</a>. <cite>W.S., Volume<sub>2</sub></cite>
+            </p>
+            <blockquote>
+                Beware the Jabberwock, my son!
+                The jaws that bite, the claws that catch!
+                Beware the Jubjub bird, and shun
+                The frumious Bandersnatch!
+            </blockquote>
+        </div>
+
+
+        <div class="step">
+            <h2>Lists, Lists, Lists</h2>
+            <h3 class="red up-25 after-25">Definition, unordered, ordered</h3>
+            <div class="row">
+                <div class="four columns">
+                    <dl>
+                        <dt>
+                            Acceleration
+                        </dt>
+                        <dd>
+                            A constant force, acting on a particle of mass m, will produce a constant acceleration a
+                        </dd>
+                        <dt>
+                            Energy
+                        </dt>
+                        <dd>
+                            If we represent kinetic energy by the symbol K, then K = ½ m v²
+                        </dd>
+                    </dl>
+                </div>
+                <div class="four columns">
+                    <h3>Medium</h3>
+                    <ul>
+                        <li>One</li>
+                        <li>Two
+                            <ul>
+                                <li>Two.One</li>
+                                <li>Two.Two</li>
+                            </ul>
+                        </li>
+                        <li>Three</li>
+                    </ul>
+                    <h4>Small</h4>
+                    <ul class="small">
+                        <li>One</li>
+                        <li>Two
+                            <ul>
+                                <li>Two.One</li>
+                                <li>Two.Two</li>
+                            </ul>
+                        </li>
+                        <li>Three</li>
+                    </ul>
+                </div>
+                <div class="four columns">
+                    <h3>Medium</h3>
+                    <ol>
+                        <li>One</li>
+                        <li>Two
+                            <ol>
+                                <li>Two.One</li>
+                                <li>Two.Two</li>
+                            </ol>
+                        </li>
+                        <li>Thre</li>
+                    </ol>
+                    <h4>Small</h4>
+                    <ol class="small">
+                        <li>One</li>
+                        <li>Two
+                            <ol>
+                                <li>Two.One</li>
+                                <li>Two.Two</li>
+                            </ol>
+                        </li>
+                        <li>Thre</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h2>Tables</h2>
+            <h3 class="red up-25 after-50">Table styles</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>One</th>
+                        <th>Two</th>
+                        <th>Three</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Four</td>
+                        <td>Five</td>
+                        <td>Six</td>
+                    </tr>
+                    <tr>
+                        <td>Seven</td>
+                        <td>Eight</td>
+                        <td>Nine</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+        <div class="step">
+            <h2>Substeps</h2>
+            <h3 class="red up-25 after-50">Triggered with class "substep"</h3>
+            <ul class="line-height-one-five">
+                <li class="substep">One</li>
+                <li class="substep">Two</li>
+                <li class="substep">Three</li>
+                <li class="substep">Four</li>
+                <li class="substep">Five</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Responsive images</h2>
+            <h3 class="red up-25 after-50">With magnific popup</h3>
+            <div class="mfp-lightbox row">
+                <div class="three columns">
+                    <a href="resources/img/1024x768.png">
+                        <img src="resources/img/1024x768.png" />
+                    </a>
+                </div>
+                <div class="four columns">
+                    <a href="resources/img/1024x768.png">
+                        <img src="resources/img/1024x768.png" />
+                    </a>
+                </div>
+                <div class="five columns">
+                    <a href="resources/img/1024x768.png">
+                        <img src="resources/img/1024x768.png" />
+                    </a>
+                </div>
+            </div>
+            <p class="down-50">
+                Website: <a href="http://dimsemenov.com/plugins/magnific-popup/">http://dimsemenov.com/plugins/magnific-popup/</a>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Code listings</h2>
+            <h3 class="red up-25 after-50">With highlight.js (support for most languages)</h3>
+<pre>
+<code class="linenumbers js">function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+             ` class="${cls}"`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+}
+
+export  $initHighlight;
+</code>
+</pre>
+        <p>
+             Website:  <a href="https://highlightjs.org/">https://highlightjs.org/</a>
+        </p>
+        </div>
+
+        <div class="step">
+            <h2>Alternative code listing</h2>
+            <h3 class="red up-25 after-25">With Codemirror (support for even more languages)</h3>
+<form><textarea id="sparql" name="sparql">
+PREFIX rel: &lt;http://purl.org/vocab/relationship/&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX foaf: &lt;http://xmlns.com/foaf/0.1/&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+
+SELECT DISTINCT ?subject ?subjectLabel ?object ?objectLabel ?predicate
+WHERE {
+    ?subject ?predicate ?object .
+    ?subject (rel:parentOf|^rel:parentOf|rel:spouseOf) ?object .
+    ?subject rdfs:label ?subjectLabel .
+    ?object rdfs:label ?objectLabel .
+    ?subject foaf:gender ?subjectGender .
+    ?object foaf:gender ?objectGender .
+    BIND (IF(?subjectGender = "male"@en, "gold", "yellowgreen") AS ?sourceColor)
+    BIND (IF(?objectGender = "male"@en, "gold", "yellowgreen") AS ?targetColor)
+}
+</textarea></form>
+        <p>
+             Website:  <a href="https://codemirror.net/">https://codemirror.net/</a>
+        </p>
+        </div>
+
+        <div class="step">
+            <h2>Charts</h2>
+            <h3 class="red up-25 after-50">With chartist.js</h3>
+            <div class="ct-container">
+                <div class="ct-chart ct-major-twelfth project-count"></div>
+            </div>
+            <p class="down-25">
+                 Website: <a href="https://gionkunz.github.io/chartist-js/">https://gionkunz.github.io/chartist-js/</a>
+            </p>
+        </div>
+
+        <div class="step">
+            <h2>Graph models</h2>
+            <h3 class="red up-25 after-25">With greuler.js</h3>
+            <div id="greuler"></div>
+            <script>
+                'use strict';
+                greuler({
+                  target: '#greuler',
+                  width: 480,
+                  height: 300,
+                  data: greuler.Graph.random({
+                    order: 5,
+                    size: 5,
+                    connected: true
+                  })
+                }).update()
+            </script>
+            <p class="down-75">
+                 Website: <a href="https://maurizzzio.github.io/greuler/#/">https://maurizzzio.github.io/greuler/#/</a>
+            </p>
+        </div>
+
+        <div class="step">
+            <div class="centered">
+                <h1>F I N I S</h1>
+                <h2>Thank you</h2>
+            </div>
+        </div>
+
+        <div class="step">
+
+            <h2>Literature &amp; Software</h2>
+
+            <h4>Literature</h4>
+
+            <ul class="small">
+                <li>
+                    One
+                </li>
+                <li>
+                    Two
+                </li>
+                <li>
+                    Three
+                </li>
+            </ul>
+
+            <h4>Software</h4>
+
+            <ul class="small">
+                <li>
+                    One
+                </li>
+                <li>
+                   Two
+                </li>
+                <li>
+                    Three
+                </li>
+            </ul>
+
+            <h4>Download</h4>
+            <ul class="small">
+                <li>
+                    <a href="#">
+                        Link to presentation
+                    </a>
+                </li>
+                <li>
+                    License: <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>, Author
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- jquery -->
+    <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+
+    <!-- chartist -->
+    <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
+    <script src="resources/js/chartist.charts.js"></script>
+
+    <!-- codemirror -->
+    <script src="vendor/codemirror/lib/codemirror.js"></script>
+    <script src="vendor/codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="vendor/codemirror/mode/sparql/sparql.js"></script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="resources/js/hljs.linenumbering.js"></script>
+
+    <!-- magnific popup -->
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
+    <script src="resources/js/magnific-popup.lightbox.js"></script>
+
+    <!-- impress.mod.js -->
+    <script src="vendor/impress/impress.fork.js"></script>
+    <script src="vendor/impress/impress-slidenum.js"></script>
+    <script>
+        var obj = impress();
+        obj.init();
+        initSlideNo(obj);
+    </script>
+
+</body>
+</html>
