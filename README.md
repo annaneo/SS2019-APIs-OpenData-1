@@ -1,15 +1,16 @@
-### Date | Place
+### 22.6.2019 | Akademie der Wissenschaften und der Literatur | Mainz
 
 # Title
 
 ## Subtitle
 
-### Author
+### Anna Neovesky
 
-Description
+Präsentation zur 1. Sitzung des Seminars "APIs und offene Daten - Deisgn, Modellierung, Best Practices" im Rahmen des Studiengangs "Digitale Methodik in den Geistes- und Kulturwissenschaften" der JGU Mainz und der HS Mainz
 
-The code of this boilerplate is at https://github.com/digicademy/impress-js-boilerplate
+Code zu diesem Repositorium:
+https://github.com/annaneo/SS2019-9o-APIs-OpenData-1.Sitzung/edit/master/README.md
 
-A live demo can be found at http://digicademy.github.io/impress-js-boilerplate/
+Präsentation: http://annavsk.github.io/SS2019-9o-APIs-OpenData-1.Sitzung
 
-Released under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), @digicademy
+Released under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), @annavsk
