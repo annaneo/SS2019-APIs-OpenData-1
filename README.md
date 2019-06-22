@@ -11,6 +11,6 @@ Präsentation zur 1. Sitzung des Seminars "APIs und offene Daten - Design, Model
 Code zu diesem Repositorium:
 https://github.com/annaneo/SS2019-9o-APIs-OpenData-1.Sitzung
 
-Präsentation: https://annaneo.github.io/SS2019-9o-APIs-OpenData-1.Sitzung/#/step-1
+Präsentation: https://annaneo.github.io/SS2019-9o-APIs-OpenData-1.Sitzung
 
 Released under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), @annavsk
